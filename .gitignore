@@ -1,0 +1,8 @@
+# Meson build directory
+/build/
+/_build/
+
+# Wrap-downloaded subproject sources (keep the .wrap files)
+/subprojects/*/
+/subprojects/.wraplock
+
