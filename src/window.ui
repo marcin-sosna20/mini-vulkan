@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="SkWindow" parent="AdwApplicationWindow">
+    <child>
+      <object class="GtkBox" id="box">
+        <property name="orientation">vertical</property>
+        <property name="spacing">0</property>
+        <child>
+          <object class="AdwHeaderBar" id="header_bar">
+            <property name="show-title">True</property>
+            <property name="title-widget">
+              <object class="AdwWindowTitle">
+                <property name="title" translatable="yes">Adwaita Vulkan</property>
+              </object>
+            </property>
+            <child type="end">
+              <object class="GtkMenuButton" id="primary_button">
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="primary">true</property>
+                <property name="menu-model">window_menu</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <!--<child>
+          <object class="GtkButton" id="button">
+            <property name="label" translatable="yes">Toggle Fullscreen</property>
+            <property name="action-name">app.fullscreen</property>
+            <signal name="clicked" handler="button_clicked_cb"/>
+          </object>
+        </child>-->
+        <child>
+          <object class="GtkBox" id="box2">
+            <property name="orientation">horizontal</property>
+            <property name="spacing">0</property>
+            <child>
+              <object class="SkVulkan" id="view">
+                <property name="vexpand">true</property>
+                <property name="hexpand">true</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="button2">
+            <property name="label" translatable="yes">StatusBar Placeholder</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+  <menu id="window_menu">
+    <section>
+      <item>
+        <attribute name="custom">Theme</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label">Open</attribute>
+      </item>
+      <item>
+        <attribute name="label">Close</attribute>
+      </item>
+      <item>
+        <attribute name="label">Quit</attribute>
+      </item>
+    </section>
+  </menu>
+  <!-- Dummy Context Menu -->
+  <menu id="menu_model">
+    <section>
+      <attribute name="display-hint">horizontal-buttons</attribute>
+      <item>
+        <attribute name="label">Cut</attribute>
+        <attribute name="action">app.cut</attribute>
+        <attribute name="verb-icon">edit-cut-symbolic</attribute>
+      </item>
+      <item>
+        <attribute name="label">Copy</attribute>
+        <attribute name="action">app.copy</attribute>
+        <attribute name="verb-icon">edit-copy-symbolic</attribute>
+      </item>
+      <item>
+        <attribute name="label">Paste</attribute>
+        <attribute name="action">app.paste</attribute>
+        <attribute name="verb-icon">edit-paste-symbolic</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

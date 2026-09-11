@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+    <gresource prefix="/org/example/App">
+        <file>style.css</file>
+    </gresource>
+    <gresource prefix="/">
+        <!--   <file alias="slang.spv">@build_dir@/slang.spv</file> -->
+        <file alias="slang.spv">slang.spv</file> 
+        <file>window.ui</file>
+    </gresource>
+</gresources>
